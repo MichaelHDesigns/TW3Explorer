@@ -21,6 +21,8 @@ const getTokenSymbol = (chain) => {
         return 'ARB';
         case 'fantom':
           return 'FTM';
+        case 'altcoinchain':
+          return 'ALT';
     default:
       return 'Unknown';
   }

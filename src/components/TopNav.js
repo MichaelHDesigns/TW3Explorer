@@ -21,6 +21,7 @@ const TopNav = ({ selectedChain, onChainSelect }) => {
     { value: 'bnb', label: 'Binance' },
     { value: 'arbitrum', label: 'Arbitrum' },
     { value: 'fantom', label: 'Fantom' },
+    { value: 'altcoinchain', label: 'Altcoinchain' },
   ];
 
   return (

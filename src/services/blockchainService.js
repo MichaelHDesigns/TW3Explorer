@@ -8,6 +8,7 @@ const rpcUrls = {
   bnb: 'https://binance.llamarpc.com',
   arbitrum: 'https://endpoints.omniatech.io/v1/arbitrum/one/public',
   fantom: 'https://fantom.drpc.org',
+  altcoinchain: ' http://62.72.177.111:8145/',
 };
 
 // Function to fetch the latest block for EVM chains
@@ -74,7 +75,7 @@ const fetchWithBackoff = async (requestFn, retries = 5) => {
 // Function to fetch transactions for a given block
 const fetchTransactions = async (chain) => {
   try {
-    if (['ethereum', 'base', 'polygon', 'bnb', 'arbitrum', 'fantom'].includes(chain)) {
+    if (['ethereum', 'base', 'polygon', 'bnb', 'arbitrum', 'fantom', 'altcoinchain'].includes(chain)) {
       const url = rpcUrls[chain];
       
       // Wrap the request in fetchWithBackoff for retry logic
@@ -113,7 +114,7 @@ const fetchTransactionDetails = async (chain, hash) => {
     let url;
     let response;
 
-    if (['ethereum', 'base', 'polygon', 'bnb', 'arbitrum', 'fantom'].includes(chain)) {
+    if (['ethereum', 'base', 'polygon', 'bnb', 'arbitrum', 'fantom', 'altcoinchain'].includes(chain)) {
       url = rpcUrls[chain];
       response = await axios.post(url, {
         jsonrpc: '2.0',
@@ -159,7 +160,7 @@ const fetchAddressDetails = async (chain, address) => {
     let ethPrice = 0;
 
     // Fetch ETH balance
-    if (['ethereum', 'base', 'polygon', 'bnb', 'arbitrum', 'fantom'].includes(chain)) {
+    if (['ethereum', 'base', 'polygon', 'bnb', 'arbitrum', 'fantom', 'altcoinchain'].includes(chain)) {
       const ethResponse = await axios.post(url, {
         jsonrpc: '2.0',
         id: 1,
@@ -195,7 +196,7 @@ const fetchBlockDetails = async (chain, blockIdentifier) => {
     let response;
 
     // Handle EVM chains (Ethereum, Base, Polygon, BNB)
-    if (['ethereum', 'base', 'polygon', 'bnb', 'arbitrum', 'fantom'].includes(chain)) {
+    if (['ethereum', 'base', 'polygon', 'bnb', 'arbitrum', 'fantom', 'altcoinchain'].includes(chain)) {
       response = await fetch(url, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

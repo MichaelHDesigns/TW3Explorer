@@ -7,7 +7,7 @@ const HomeStats = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const chains = ['ethereum', 'base', 'polygon', 'bnb', 'arbitrum', 'fantom'];
+  const chains = ['ethereum', 'base', 'polygon', 'bnb', 'arbitrum', 'fantom', 'altcoinchain'];
 
   const fetchData = async () => {
     try {

@@ -27,6 +27,7 @@ const getTokenSymbol = (chain) => {
         return 'ARB';
         case 'fantom':
           return 'FTM';
+    case 'fantom': return 'FTM';
     default:
       return 'Unknown';
   }
