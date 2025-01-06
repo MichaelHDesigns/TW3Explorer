@@ -1,0 +1,123 @@
+/* Container for the entire block details section */
+.block-details-container {
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: hsl(288, 94%, 13%);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title of the block details section */
+.block-details-container h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  text-align: center;
+  color: white;
+}
+
+/* Subheading for the transactions section */
+.block-details-container h3 {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+/* Styling individual block details (Block Number, Hash, etc.) */
+.block-details-container div {
+  font-size: 1.1rem;
+  margin-bottom: 15px; /* Increased spacing between sections */
+}
+
+.block-details-container div strong {
+  font-weight: bold;
+  color: white;
+  margin-right: 10px; /* Adds space between the label and the value */
+}
+
+/* Style for the transactions list */
+.block-details-container ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Individual transaction item styling */
+.block-details-container ul li {
+  padding: 15px;
+  margin-bottom: 10px;
+  background-color: hsl(288, 94%, 13%);
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Transaction details styling */
+.block-details-container ul li div {
+  margin-bottom: 10px; /* Increased space between transaction details */
+  font-size: 1rem;
+}
+
+.block-details-container ul li div strong {
+  margin-right: 10px; /* Space between the label and the value */
+}
+
+/* When no transactions are found */
+.block-details-container .no-transactions {
+  text-align: center;
+  font-size: 1.2rem;
+  color: white;
+}
+
+/* Add spacing between the label and the value */
+.block-details-container .value-label {
+  margin-right: 10px; /* Adds space between the label and the value */
+}
+
+/* Add spacing between the value and the token symbol */
+.block-details-container .value-spacing {
+  margin-right: 10px; /* Adds space between the value and the token symbol */
+}
+
+/* Optional: style for the token symbol */
+.block-details-container .token-symbol {
+  font-size: 1.1rem; /* Adjust font size if needed */
+  color: white;
+}
+
+.green-bold {
+  color: #14f100;
+  font-weight: bold;
+}
+
+/* Styling for error and loading states */
+.block-details-container .error,
+.block-details-container .loading {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #d9534f; /* Red for error */
+}
+
+.block-details-container .loading {
+  color: #5bc0de; /* Light blue for loading */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .block-details-container {
+    width: 90%;
+  }
+
+  .block-details-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .block-details-container h3 {
+    font-size: 1.2rem;
+  }
+
+  .block-details-container div,
+  .block-details-container ul li div {
+    font-size: 1rem;
+  }
+}

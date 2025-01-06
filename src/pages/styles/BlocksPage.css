@@ -1,0 +1,140 @@
+.blocks-container {
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.blocks-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.blocks-subheader {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.block-number-link {
+  margin-left: 10px; /* Adds spacing between the "Block Number:" text and the block number */
+  color: white; /* Ensure the link text color matches your design */
+  text-decoration: none;
+}
+
+.block-number-link:hover {
+  text-decoration: none; /* Add hover effect if needed */
+}
+
+/* Table Styling */
+.blocks-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  overflow-x: auto; /* Make the table scrollable on smaller screens */
+}
+
+.blocks-table th, .blocks-table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.blocks-table th {
+  background-color: hsl(288, 94%, 13%);
+  font-weight: bold;
+}
+
+.blocks-table tr:nth-child(even) {
+  background-color: hsl(288, 94%, 13%);
+}
+
+.blocks-table tr:hover {
+  background-color: hsl(288, 94%, 13%);
+}
+
+.blocks-table td {
+  font-size: 14px;
+}
+
+.blocks-table .link {
+  color: white;
+  text-decoration: none;
+}
+
+.blocks-table .link:hover {
+  text-decoration: underline;
+}
+
+.green-bold {
+  color: #14f100;
+  font-weight: bold;
+}
+
+/* Loading & Error Styling */
+.loading, .error {
+  font-size: 18px;
+  color: #888;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.error {
+  color: #d9534f;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .blocks-container {
+    padding: 15px;
+    width: 95%; /* Make the container slightly wider */
+  }
+
+  .blocks-header {
+    font-size: 20px; /* Smaller font size for header */
+  }
+
+  .blocks-subheader {
+    font-size: 18px; /* Adjust subheader font size */
+  }
+
+  .blocks-table th, .blocks-table td {
+    padding: 8px; /* Adjust padding for smaller screens */
+  }
+
+  .blocks-table td {
+    font-size: 12px; /* Adjust font size for table cells */
+  }
+
+  /* Make table scrollable horizontally */
+  .blocks-table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .blocks-table th, .blocks-table td {
+    white-space: nowrap; /* Prevent text from wrapping */
+  }
+}
+
+@media (max-width: 480px) {
+  .blocks-container {
+    padding: 10px;
+  }
+
+  .blocks-header {
+    font-size: 18px; /* Further reduce header font size */
+  }
+
+  .blocks-subheader {
+    font-size: 16px; /* Further reduce subheader font size */
+  }
+
+  .blocks-table th, .blocks-table td {
+    padding: 6px; /* Further adjust padding */
+  }
+
+  .blocks-table td {
+    font-size: 10px; /* Adjust font size for very small screens */
+  }
+}

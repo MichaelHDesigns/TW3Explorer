@@ -1,0 +1,86 @@
+.tx-details-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  background-color: hsl(288, 94%, 13%);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 2em;
+  color: white;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Add spacing between each section */
+.tx-overview,
+.tx-fees {
+  background-color: hsl(288, 94%, 13%);
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Add spacing between each transaction detail item */
+.tx-overview div,
+.tx-fees div {
+  font-size: 1.1em;
+  margin-bottom: 15px; /* Add margin between each item */
+}
+
+/* Add spacing between label and value */
+.tx-overview div strong,
+.tx-fees div strong {
+  font-weight: bold;
+  color: white;
+  margin-right: 10px; /* Add space between the label and the value */
+}
+
+/* Add space between the number (value) and the token symbol */
+.tx-fees div span {
+  margin-right: 5px; /* Space between value and token symbol */
+}
+
+.tx-fees div strong {
+  margin-left: 5px; /* Space between value and token symbol */
+}
+
+/* Specific adjustments for "Block" and "Value" */
+.tx-overview div:nth-child(3),  /* Block item */
+.tx-fees div:nth-child(1) {     /* Value item */
+  margin-bottom: 25px; /* Add more space for Block and Value sections */
+}
+
+.tx-fees div {
+  margin-bottom: 15px; /* Ensure spacing for each item */
+}
+
+.tx-overview div a,
+.tx-fees div a {
+  color: white; /* Optional: Add a color to links */
+}
+
+.green-bold {
+  color: #14f100;
+  font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .tx-details-container {
+    padding: 15px;
+  }
+
+  .tx-overview div,
+  .tx-fees div {
+    font-size: 1em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+}

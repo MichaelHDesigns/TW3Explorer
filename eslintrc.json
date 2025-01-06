@@ -1,0 +1,21 @@
+{
+  "env": {
+    "es2020": true,
+    "browser": true,
+    "node": true
+  },
+  "extends": [
+    "react-app",
+    "eslint:recommended"
+  ],
+  "globals": {
+    "BigInt": "readonly"
+  },
+  "plugins": [
+    "react",
+    "jsx-a11y"
+  ],
+  "rules": {
+    // You can add custom rules here if needed
+  }
+}

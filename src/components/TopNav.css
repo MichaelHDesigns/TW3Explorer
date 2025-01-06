@@ -1,0 +1,89 @@
+.top-nav {
+  background-color: hsl(288, 94%, 13%);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between; /* Keeps the elements spaced out */
+  align-items: center;
+}
+
+.links-container {
+  display: flex;
+  gap: 20px; /* Space between Home and Stats links */
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 24px; /* Ensures links align perfectly */
+  display: inline-block; /* Ensures they are treated as inline elements */
+}
+
+.nav-link:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-link.active {
+  font-weight: bold; /* You can add a style to highlight the active link */
+}
+
+/* Style for react-select */
+.react-select__control {
+  background-color: hsl(288, 94%, 13%) !important; /* Purple background */
+  color: white !important; /* White text */
+  border: 1px solid white !important; /* White border */
+  border-radius: 4px; /* Optional: Rounded corners */
+  padding: 5px 10px;
+  font-size: 16px; /* Adjust font size */
+  font-weight: bold;
+}
+
+/* Style for the option list */
+.react-select__menu {
+  background-color: hsl(288, 94%, 13%) !important; /* Purple background */
+  color: white !important; /* White text */
+  border: 1px solid white !important; /* White border */
+  border-radius: 4px; /* Optional: Rounded corners */
+  font-weight: bold;
+}
+
+.react-select__option {
+  background-color: hsl(288, 94%, 13%) !important; /* Purple background for options */
+  color: white !important; /* White text for options */
+  padding: 10px;
+}
+
+/* Hover effect for options */
+.react-select__option--is-focused {
+  background-color: white !important; /* White background when hovering */
+  color: hsl(288, 94%, 13%) !important; /* Purple text when hovering */
+}
+
+.react-select__option--is-selected {
+  background-color: white !important; /* White background when selected */
+  color: hsl(288, 94%, 13%) !important; /* Purple text when selected */
+  font-weight: bold;
+}
+
+/* Style for the selected item text (the one displayed above the dropdown) */
+.react-select__single-value {
+  color: white !important; /* White text for the selected option */
+}
+
+@media (max-width: 768px) {
+  .top-nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .links-container {
+    flex-direction: column; /* Stack Home and Stats links vertically on smaller screens */
+    gap: 10px; /* Adjust gap for mobile */
+  }
+
+  .nav-link {
+    font-size: 16px;
+  }
+}

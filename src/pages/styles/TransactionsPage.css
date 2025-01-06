@@ -1,0 +1,119 @@
+.transactionsExplorer-container {
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  width: 90%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.transactionsExplorer-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.transactionsExplorer-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  overflow-x: auto; /* Make the table scrollable on smaller screens */
+}
+
+.transactionsExplorer-table th,
+.transactionsExplorer-table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.transactionsExplorer-table th {
+  background-color: hsl(288, 94%, 13%);
+  font-weight: bold;
+}
+
+.transactionsExplorer-table tr:nth-child(even) {
+  background-color: hsl(288, 94%, 13%);
+}
+
+.transactionsExplorer-table tr:hover {
+  background-color: hsl(288, 94%, 13%);
+}
+
+.transactionsExplorer-table td {
+  font-size: 14px;
+}
+
+.transactionsExplorer-table .link {
+  color: white;
+  text-decoration: none;
+}
+
+.transactionsExplorer-table .link:hover {
+  text-decoration: underline;
+}
+
+.green-bold {
+  color: #14f100;
+  font-weight: bold;
+}
+
+/* Loading & Error Styling */
+.loading, .error {
+  font-size: 18px;
+  color: #888;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.error {
+  color: #d9534f;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .transactionsExplorer-container {
+    padding: 15px;
+    width: 95%; /* Make the container a bit wider */
+  }
+
+  .transactionsExplorer-header {
+    font-size: 20px; /* Smaller font size */
+  }
+
+  .transactionsExplorer-table th, .transactionsExplorer-table td {
+    padding: 8px; /* Adjust padding */
+  }
+
+  .transactionsExplorer-table td {
+    font-size: 12px; /* Adjust font size */
+  }
+
+  /* Make table scrollable horizontally */
+  .transactionsExplorer-table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .transactionsExplorer-table th, .transactionsExplorer-table td {
+    white-space: nowrap; /* Prevent text from wrapping */
+  }
+}
+
+@media (max-width: 480px) {
+  .transactionsExplorer-container {
+    padding: 10px;
+  }
+
+  .transactionsExplorer-header {
+    font-size: 18px; /* Smaller header on smaller screens */
+  }
+
+  .transactionsExplorer-table th, .transactionsExplorer-table td {
+    padding: 6px; /* Further adjust padding */
+  }
+
+  .transactionsExplorer-table td {
+    font-size: 10px; /* Adjust font size for very small screens */
+  }
+}

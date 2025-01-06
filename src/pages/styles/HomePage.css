@@ -1,0 +1,143 @@
+body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    font-family: 'Roboto', sans-serif; /* Modern font for a clean look */
+    margin: 0;
+    padding: 0;
+    background-color: hsl(288, 94%, 13%); /* Light background for the whole page */
+}
+
+html, body {
+    width: 100%; /* Prevent horizontal overflow */
+}
+
+/* Parent container: No grid here */
+.homepage-container {
+    padding: 20px;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Blockchain data container: Using flexbox to arrange content side by side */
+.blockchain-data-container {
+    display: flex; /* Use flexbox to display items side by side */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically (if they do not take up full height) */
+    gap: 20px; /* Space between grid items */
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 30px; /* Added margin at the bottom for spacing */
+}
+
+/* Transaction container as grid */
+.transactions-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between grid items */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    word-wrap: break-word;
+    box-sizing: border-box;
+    background-color: hsl(288, 94%, 13%); /* White background for each card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effect */
+    overflow: hidden; /* Prevent overflow */
+    flex: 1 1 45%; /* Ensures it takes up 45% of the container width */
+}
+
+/* Block container as grid */
+.block-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between grid items */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    word-wrap: break-word;
+    box-sizing: border-box;
+    background-color: hsl(288, 94%, 13%); /* White background for each card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effect */
+    overflow: hidden; /* Prevent overflow */
+    flex: 1 1 45%; /* Ensures it takes up 45% of the container width */
+    /* Centering the block container */
+    margin: 0 auto; /* This centers the block container horizontally */
+}
+
+/* Heading */
+h3 {
+    margin: 0 0 12px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white !important;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 8px 0;
+    font-size: 0.95rem; /* Slightly larger font for list items */
+    line-height: 1.5;
+    color: white; /* Softer text color */
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: white; /* Darker blue on hover */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .transactions-container,
+    .block-container {
+        grid-template-columns: 1fr; /* Stack items vertically on smaller screens */
+        gap: 15px; /* Reduced gap between items on mobile */
+        flex: 1 1 100%; /* Stack both blocks on mobile */
+    }
+
+    .transactions-container,
+    .block-container {
+        padding: 12px;
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        font-size: 1.1rem; /* Adjust heading font size on mobile */
+    }
+
+    li {
+        font-size: 0.9rem; /* Adjust list item font size on mobile */
+    }
+}
+
+/* Prevent overflow issues */
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.transactions-container a,
+.block-container a {
+    display: inline-block; /* Ensure links are inline-block for proper truncation */
+    max-width: 100%; /* Allow links to take full width */
+    overflow: hidden; /* Hide overflow */
+}
